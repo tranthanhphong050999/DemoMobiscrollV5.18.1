@@ -1,0 +1,11 @@
+{
+  "name": "hello-world",
+  "integrations": {},
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/posts",
+      "proxyUrl": "http://localhost:3000/posts"
+    }
+  ]
+}

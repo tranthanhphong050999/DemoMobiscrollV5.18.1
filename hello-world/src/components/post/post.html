@@ -1,0 +1,9 @@
+<div (click)="fireCustomEvent()">
+  <h1>{{item?.title}}</h1>
+  <h2>
+    <p>{{item?.content}}</p>
+    <p>{{item?.author}}</p>
+    <p>{{item?.regtime | dateFormatter: 'YYYY/MM/DD HH:mm'}}</p>
+  </h2>
+  <ng-content></ng-content>
+</div>

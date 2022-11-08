@@ -1,0 +1,75 @@
+<!--
+  Generated template for the HelloWordPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>HelloWord
+    </ion-title>
+    <cs-header >
+    </cs-header>
+  </ion-navbar>
+  <ion-item>
+    <button ion-button (click)="toCreatePost()">CreatePost</button>
+  </ion-item>
+</ion-header>
+
+<ion-content padding>
+  <mbsc-datepicker
+      [(ngModel)]="valuephongtt"
+      returnFormat="iso8601"
+      [controls]="['time']"
+      label="Time picker"
+      inputStyle="outline"
+      labelStyle="stacked"
+      placeholder="Please Select..."
+    ></mbsc-datepicker>
+    <mbsc-datepicker
+      [(ngModel)]="valuephongtt"
+      returnFormat="iso8601"
+      [controls]="['time']"
+      timeFormat="HH:mm"
+      label="24 hour picker"
+      inputStyle="outline"
+      labelStyle="stacked"
+      placeholder="Please Select..."
+    ></mbsc-datepicker>
+    <mbsc-datepicker
+      [(ngModel)]="valuephongtt"
+      returnFormat="iso8601"
+      [controls]="['time']"
+      timeFormat="h:mm A"
+      label="12 hour picker with AM/PM"
+      inputStyle="outline"
+      labelStyle="stacked"
+      placeholder="Please Select..."
+    ></mbsc-datepicker>
+    <mbsc-datepicker
+      [(ngModel)]="valuephongtt"
+      returnFormat="iso8601"
+      [controls]="['time']"
+      timeFormat="HH:mm:ss"
+      headerText="Time: {value}"
+      label="Hour, Min, Sec"
+      inputStyle="outline"
+      labelStyle="stacked"
+      placeholder="Please Select..."
+    ></mbsc-datepicker>
+  <ion-list>
+    <ion-item *ngFor="let post of posts" class="pe-list-item" >
+        <cs-post [item]="post" (selected)="viewDetail($event.data?.id)">
+          <h2>Post child content here</h2>
+        </cs-post>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="changeName($event)">CHANGE</button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="center" >
+    <cs-footer>
+    </cs-footer>
+  </ion-toolbar>
+</ion-footer>

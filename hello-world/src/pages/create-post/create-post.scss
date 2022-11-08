@@ -1,0 +1,9 @@
+page-create-post {
+    .alert{
+        color: red;
+    }
+
+    .input-has-focus .label {
+        color: map-get($colors, primary)
+    }
+}

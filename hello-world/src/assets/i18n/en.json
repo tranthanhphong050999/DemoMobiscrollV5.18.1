@@ -1,0 +1,7 @@
+{
+    "HELLO": "Hello {{value}}",
+    "TITLE": "Title",
+    "CONTENT": "Content",
+    "AUTHOR": "Author",
+    "REGTIME": "RegTime"
+}
